@@ -1,20 +1,21 @@
 import React, { Component } from "react";
-import FriendCard from "./components/FriendCard";
+import CardHolder from "./components/CardHolder"
+import Card from "./components/Card";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
-import friends from "./friends.json";
+import cards from "./cards.json";
 
 class App extends Component {
-  // Setting this.state.friends to the friends json array
+  // Setting this.state.cards to the cards json array
   state = {
-    friends
+    cards
   };
 
-  removeFriend = id => {
+  removeCard = id => {
     // Filter this.state.friends for friends with an id not equal to the id being removed
-    const friends = this.state.friends.filter(friend => friend.id !== id);
+    const cards = this.state.cards.filter(card => card.id !== id);
     // Set this.state.friends equal to the new friends array
-    this.setState({ friends });
+    this.setState({ cards });
   };
 
   // Map over this.state.friends and render a FriendCard component for each friend object
@@ -22,14 +23,16 @@ class App extends Component {
     return (
       <Wrapper>
         <Title>ClicKlack</Title>
-        {this.state.friends.map(friend => (
-          <FriendCard
-            removeFriend={this.removeFriend}
-            id={friend.id}
-            key={friend.id}
-            image={friend.image}
+        <CardHolder>
+        {this.state.cards.map(card => (
+          <Card
+            removeCard={this.removeCard}
+            id={card.id}
+            key={card.id}
+            image={card.image}
           />
         ))}
+        </CardHolder>
       </Wrapper>
     );
   }
