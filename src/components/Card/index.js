@@ -3,12 +3,13 @@ import "./style.css";
 
 function Card(props) {
   return (
-    <div className="card" onClick={props.handleClick}>
+    <button onClick={props.onClick}>
+    <div className="card" >
       <div className="img-container">
-      <p className="card-text">Click Count: {props.count}</p>
         <img alt={props.name} src={props.image} />
       </div>
     </div>
+    </button>
   );
 }
 

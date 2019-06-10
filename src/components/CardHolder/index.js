@@ -9,10 +9,18 @@ class CardHolder extends React.Component {
   state = {
     cards: cards,
     count: 0
+    // clickedcards: []
   };
 
   handleClick = () => {
-    this.setState({ count: this.state.count + 1 });
+    // if card is in clicked cards, reset game.
+    // else
+    // shuffle cards array
+    // let newcards = result of array shuffle
+    this.setState({
+      // cards: newcards,
+      count: this.state.count + 1
+    });
   }
 
 render(){  return (
@@ -21,7 +29,6 @@ render(){  return (
         <div className="col-lg-10 cardholder">
         {this.state.cards.map(card => (
           <Card
-            count={this.state.count}
             onClick={this.handleClick}
             id={card.id}
             key={card.id}
