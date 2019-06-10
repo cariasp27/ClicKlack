@@ -16,17 +16,23 @@ class CardHolder extends React.Component {
   handleClick = (id) => {
    let cid = id;
    console.log(cid);
-   let currentcard = this.state.cards[cid];
-   console.log(currentcard)
    let ccards = this.state.clickedcards
    console.log(ccards);
+
+
    if (ccards.indexOf(cid) >= 0){
-    this.setState({
-      count: 0
-    });
+
+
+     this.setState({
+       count: 0
+     });
+
+
+
+
    }
    else {
-   this.state.clickedcards.push(currentcard)
+   ccards.push(cid)
    function shuffle(a) {
     for (let i = a.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
