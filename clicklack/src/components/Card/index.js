@@ -3,13 +3,11 @@ import "./style.css";
 
 function Card(props) {
   return (
-    <div className="card">
+    <div className="card" onClick={props.handleClick}>
       <div className="img-container">
+      <p className="card-text">Click Count: {props.count}</p>
         <img alt={props.name} src={props.image} />
       </div>
-      <span onClick={() => props.removeCard(props.id)} className="remove">
-        𝘅
-      </span>
     </div>
   );
 }
