@@ -1,7 +1,9 @@
 import React from "react";
 import Card from "../Card";
+import Title from "../Title";
 import "./style.css";
 import cards from "../../cards.json";
+
 
 class CardHolder extends React.Component {
   state = {
@@ -15,6 +17,7 @@ class CardHolder extends React.Component {
 
 render(){  return (
     <div className="row">
+              <Title>ClicKlack Score:{this.state.count}</Title>
         <div className="col-lg-10 cardholder">
         {this.state.cards.map(card => (
           <Card
