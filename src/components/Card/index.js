@@ -4,11 +4,11 @@ import "./style.css";
 function Card(props) {
   return (
     <button onClick={() => props.onClick(props.id)}>
-    <div className="card" >
-      <div className="img-container">
-        <img alt={props.name} src={props.image} />
+      <div className="card" >
+        <div className="img-container">
+          <img alt={props.name} src={props.image} />
+        </div>
       </div>
-    </div>
     </button>
   );
 }

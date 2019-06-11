@@ -1,10 +1,13 @@
+button {
+  margin: 20px
+}
 .card {
   background: #fff;
   border-radius: 2px;
-  height: 12rem;
+  height: 10rem;
   margin: 10px;
   float: left;
-  width: 12rem;
+  width: 10rem;
   box-shadow: 0 3px 6px #999, 0 3px 6px #999;
   text-align: left;
 }

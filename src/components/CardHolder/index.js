@@ -14,60 +14,52 @@ class CardHolder extends React.Component {
   };
 
   handleClick = (id) => {
-   let cid = id;
-   console.log(cid);
-   let ccards = this.state.clickedcards
-   console.log(ccards);
-
-
-   if (ccards.indexOf(cid) >= 0){
-
-
-     this.setState({
-       count: 0
-     });
-
-
-
-
-   }
-   else {
-   ccards.push(cid)
-   function shuffle(a) {
-    for (let i = a.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [a[i], a[j]] = [a[j], a[i]];
+    if (this.state.count < 9){
+    let c_id = id;
+    let c_cards = this.state.clickedcards
+    if (c_cards.indexOf(c_id) >= 0) {
+      this.setState({
+                      count: 0,
+                      clickedcards: [] });
     }
-    return a;
-}
-   let newcards = shuffle(cards)
-    // if card is in clicked cards, reset game.
-    // else
-    // shuffle cards array
-    // let newcards = result of array shuffle
-    this.setState({
-      cards: newcards,
-      count: this.state.count + 1
-    });
+    else {
+      c_cards.push(c_id)
+
+      function shuffle(a) {
+        for (let i = a.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [a[i], a[j]] = [a[j], a[i]];
+        }
+        return a;
+      }
+      let newcards = shuffle(cards)
+      this.setState({
+        cards: newcards,
+        count: this.state.count + 1
+      });
+    }
+  }else {
+    alert("You Won!");
   }
   }
 
-render(){  return (
-    <div className="row">
-              <Title>ClicKlack Score:{this.state.count}</Title>
-        <div className="col-lg-10 cardholder">
-        {this.state.cards.map(card => (
-          <Card
-            onClick={this.handleClick}
-            id={card.id}
-            key={card.id}
-            image={card.image}
-          />
-        ))}
+  render() {
+    return (
+      <div className="row">
+        <Title>ClicKlack Score:{this.state.count}</Title>
+        <div className="col-lg-11 cardholder">
+          {this.state.cards.map(card => (
+            <Card
+              onClick={this.handleClick}
+              id={card.id}
+              key={card.id}
+              image={card.image}
+            />
+          ))}
         </div>
-    </div>
-  );
-}
+      </div>
+    );
+  }
 }
 
 export default CardHolder;
