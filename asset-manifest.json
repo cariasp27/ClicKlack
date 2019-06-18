@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/ClicKlack/static/css/main.a791f79c.chunk.css",
+    "main.js": "/ClicKlack/static/js/main.0b781826.chunk.js",
+    "main.js.map": "/ClicKlack/static/js/main.0b781826.chunk.js.map",
+    "runtime~main.js": "/ClicKlack/static/js/runtime~main.20ec97bc.js",
+    "runtime~main.js.map": "/ClicKlack/static/js/runtime~main.20ec97bc.js.map",
+    "static/js/2.548e0644.chunk.js": "/ClicKlack/static/js/2.548e0644.chunk.js",
+    "static/js/2.548e0644.chunk.js.map": "/ClicKlack/static/js/2.548e0644.chunk.js.map",
+    "index.html": "/ClicKlack/index.html",
+    "precache-manifest.e8f4b55d4f9509007611531dcc355070.js": "/ClicKlack/precache-manifest.e8f4b55d4f9509007611531dcc355070.js",
+    "service-worker.js": "/ClicKlack/service-worker.js",
+    "static/css/main.a791f79c.chunk.css.map": "/ClicKlack/static/css/main.a791f79c.chunk.css.map",
+    "static/media/style.css": "/ClicKlack/static/media/blackorchid_@2X.e59f32fa.jpg"
+  }
+}
